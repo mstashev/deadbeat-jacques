@@ -51,7 +51,7 @@ $(document).ready(function(){
             `
   }
 
-  function timeline_url() {
+  function notes_url() {
     if(signed_in()){
       return api_root + "notes?token=" + get_token()
     } else {
@@ -120,7 +120,7 @@ $(document).ready(function(){
 
     function first_load(){
       $('#note_list').empty()
-      $.getJSON(timeline_url())
+      $.getJSON(notes_url())
         .done(function(response){
           response.forEach(function(note){
             $('#note_list').append(
