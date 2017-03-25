@@ -133,8 +133,6 @@ $(document).ready(function(){
           }
         })
     }
-  // console.log(toggle_sign_in())
   toggle_sign_in()
-  console.log(first_load())
   first_load()
 })
