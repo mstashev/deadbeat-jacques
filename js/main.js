@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  api_root = "https://deadbeat-jacques.herokuapp.com/"
+  api_root = "https://deadbeat-jacques.herokuapp.com/api/"
 
   // Utility Methods
 
