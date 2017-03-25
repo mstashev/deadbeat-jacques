@@ -3,20 +3,20 @@ $(document).ready(function(){
 
   // Utility Methods
 
-  function set_token(token) {
-    localStorage.setItem('token', token);
+  function set_token(api_token) {
+    localStorage.setItem('api_token', api_token);
   }
 
   function get_token() {
-    return localStorage.getItem('token')
+    return localStorage.getItem('api_token')
   }
 
   function log_out(){
-    localStorage.removeItem('token')
+    localStorage.removeItem('api_token')
   }
 
   function signed_in() {
-    if(localStorage.getItem('token') === null) {
+    if(localStorage.getItem('api_token') === null) {
       return false
     } else {
       return true
@@ -53,7 +53,7 @@ $(document).ready(function(){
 
   function notes_url() {
     if(signed_in()){
-      return api_root + "notes?token=" + get_token()
+      return api_root + "notes?api_token=" + get_token()
     } else {
       return api_root + "notes"
     }
@@ -75,7 +75,7 @@ $(document).ready(function(){
       ev.preventDefault()
       $.post(api_root + "create", $(this).serialize())
         .done(function(response){
-          set_token(response.token)
+          set_token(response.api_token)
           toggle_sign_in()
           populate_notes()
         })
@@ -83,7 +83,7 @@ $(document).ready(function(){
 
     $('#post_note').on('submit', function(ev){
       ev.preventDefault()
-      $.post(api_root + "notes/create?token=" + get_token(), $(this).serialize())
+      $.post(api_root + "notes/create?api_token=" + get_token(), $(this).serialize())
         .done(function(note){
           $('#note_list').prepend(
             note_display(note)
@@ -103,7 +103,7 @@ $(document).ready(function(){
       ev.preventDefault()
       $.post(api_root + "login", $(this).serialize())
         .done(function(response){
-          set_token(response.token)
+          set_token(response.api_token)
           reset_form('#sign_in')
           toggle_sign_in()
           populate_notes()
