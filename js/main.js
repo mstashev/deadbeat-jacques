@@ -63,7 +63,7 @@ $(document).ready(function(){
     $('#note_list').empty()
     $.getJSON(notes_url())
       .done(function(response){
-        response.forEach(function(note){
+        response.notes.forEach(function(note){
           $('#note_list').append(
             note_display(note)
           )
