@@ -126,9 +126,10 @@ $(document).ready(function(){
           // console.log(response.notes)
           response.notes.forEach(function(note){
             // console.log(note_display(note))
-            console.log($('#note_list').append(
+            $('#note_list').append(
               note_display(note)
-            ))
+            )
+            console.log($('#note_list'))
           })
           if(window.location.hash){
             $('a[href="' + window.location.hash + '"]').click()
