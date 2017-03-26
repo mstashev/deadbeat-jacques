@@ -30,7 +30,7 @@ html, body {
 
 /* Header */
  header {
-    background-image: "../images/ocean-background.jpg";
+    background-image: url("../images/ocean-background.jpg");
     background-size: cover;
     font-family: 'Open Sans';
  }
