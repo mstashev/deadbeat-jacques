@@ -122,7 +122,7 @@ $(document).ready(function(){
       $('#note_list').empty()
       $.getJSON(notes_url())
         .done(function(response){
-          console.log(response.notes)
+          // console.log(response.notes)
           response.notes.forEach(function(note){
             console.log(note_display(note))
             $('#note_list').append(
