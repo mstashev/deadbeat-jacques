@@ -129,8 +129,8 @@ $(document).ready(function(){
             $('#note_list').append(
               note_display(note)
             )
-            console.log($('#note_list').html())
           })
+          console.log($('#note_list').html())
           if(window.location.hash){
             $('a[href="' + window.location.hash + '"]').click()
           }
