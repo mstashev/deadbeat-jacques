@@ -41,10 +41,10 @@ $(document).ready(function(){
     var tag_list = ''
     tags.forEach(function(tag){
       if (tags.indexOf(tag) != (tags.length - 1)) {
-        tag_list += `<a href="${tag.name}">${tag.name}</a>,&nbsp;`
+        tag_list += `<a href="${tag.name}" class="tag_href">${tag.name}</a>,&nbsp;`
       }
       else {
-        tag_list += `<a href="${tag.name}">${tag.name}</a>`
+        tag_list += `<a href="${tag.name}" class="tag_href">${tag.name}</a>`
       }
     })
     return tag_list
