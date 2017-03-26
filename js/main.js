@@ -85,9 +85,9 @@ $(document).ready(function(){
 
   function tags_url(tag_name) {
     if(signed_in()){
-      return api_root + "notes/tag/tag_name?api_token=" + get_token()
+      return api_root + "notes/tag/" + tag_name + "?api_token=" + get_token()
     } else {
-      return api_root + "notes/tag/tag_name"
+      return api_root + "notes/tag/" + tag_name
     }
   }
 
