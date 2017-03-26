@@ -40,13 +40,23 @@ $(document).ready(function(){
   function print_notes(tags) {
     var tag_list = ''
     tags.forEach(function(tag){
-      console.log(tags.indexOf(tag))
-      console.log(tags.length)
       if (tags.indexOf(tag) != (tags.length - 1)) {
-        tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>,&nbsp;`
+        if (tag.name.includes('/') == true){
+          var internet_tag_name = tag.name.replace('/','_')
+          tag_list += `<a href="${tag_url(internet_tag_name)}">${tag.name}</a>,&nbsp;`
+        }
+        else {
+          tag_list += `<a href="${tag_url(tag.name)}">${tag.name}</a>,&nbsp;`
+        }
       }
       else {
-        tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>`
+        if (tag.name.includes('/') == true){
+          var internet_tag_name = tag.name.replace('/','_')
+          tag_list += `<a href="${tag_url(internet_tag_name)}">${tag.name}</a>`
+        }
+        else {
+          tag_list += `<a href="${tag_url(tag.name)}">${tag.name}</a>`
+        }
       }
     })
     return tag_list
@@ -70,6 +80,14 @@ $(document).ready(function(){
       return api_root + "notes?api_token=" + get_token()
     } else {
       return api_root + "notes"
+    }
+  }
+
+  function tags_url(tag_name) {
+    if(signed_in()){
+      return api_root + "notes/tag/tag_name?api_token=" + get_token()
+    } else {
+      return api_root + "notes/tag/tag_name"
     }
   }
 
