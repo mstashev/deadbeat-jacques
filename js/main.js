@@ -105,6 +105,7 @@ $(document).ready(function(){
 
     $(document).on('click', '.tag_href', function(ev){
       ev.preventDefault()
+      var tag = $(ev.target).attr('href')
       $.post(api_root + tags_url(tag), $(this).serialize())
         .done(function(response){
         toggle_sign_in()
