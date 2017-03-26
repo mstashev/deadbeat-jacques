@@ -40,6 +40,7 @@ $(document).ready(function(){
   function print_notes(tags) {
     var tag_list = ''
     tags.forEach(function(tag){
+      console.log(tags.indexOf(tag))
       if (tags.indexOf(tag) != tags.length) {
         tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>,&nbsp;`
       }
