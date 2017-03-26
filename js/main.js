@@ -103,7 +103,7 @@ $(document).ready(function(){
       ev.preventDefault()
       $.post(api_root + "login", $(this).serialize())
         .done(function(response){
-          console.log(response)
+          // console.log(response)
           set_token(response.api_token)
           reset_form('#sign_in')
           toggle_sign_in()
@@ -125,12 +125,12 @@ $(document).ready(function(){
         .done(function(response){
           // console.log(response.notes)
           response.notes.forEach(function(note){
-            // console.log(note_display(note))
+            console.log(note_display(note))
             $('#note_list').append(
               note_display(note)
             )
           })
-          console.log($('#note_list').html())
+          // console.log($('#note_list').html())
           if(window.location.hash){
             $('a[href="' + window.location.hash + '"]').click()
           }
