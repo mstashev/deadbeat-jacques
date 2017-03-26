@@ -105,9 +105,8 @@ $(document).ready(function(){
 
     $(document).on('click', '.tag_href', function(ev){
       ev.preventDefault()
-      $.post(api_root + "create", $(this).serialize())
+      $.post(api_root + tags_url(tag), $(this).serialize())
         .done(function(response){
-        set_token(response.api_token)
         toggle_sign_in()
         populate_tagged_notes()
       })
