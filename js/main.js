@@ -40,12 +40,13 @@ $(document).ready(function(){
   function print_notes(tags) {
     var tag_list = ''
     tags.forEach(function(tag){
-      if (tag.next() != '') {
-        tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>,&nbsp;`
-      }
-      else {
-        tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>`
-      }
+      console.log(tag)
+      // if (tag.next() != '') {
+      //   tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>,&nbsp;`
+      // }
+      // else {
+      //   tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>`
+      // }
     })
     return tag_list
   }
