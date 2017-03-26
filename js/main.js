@@ -124,8 +124,9 @@ $(document).ready(function(){
         .done(function(response){
           // console.log(response.notes)
           response.notes.forEach(function(note){
-            console.log(note)
+            // console.log(note)
             $('#note_list').append(
+              console.log(note_display(note))
               note_display(note)
             )
           })
