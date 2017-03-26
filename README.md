@@ -3,9 +3,6 @@
 ## Explorer Mode
 
 
-
-- Tag names should be links that when clicked, load the notes with that tag and change the primary heading to "Notemeister 5000: {{tag name}}"
-
 - Posting a new note should add it to the top of the list and clear out the form so you can post another
 
 - If I append the id of a note to the url (as: #:id), a Bootstrap modal should display with just that specific note.

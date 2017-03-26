@@ -49,7 +49,11 @@ html, body {
       color: #053553;
 }
 
-header a, header a:link, header a:visited, header a:hover, header a:active {
+header a,
+header a:link,
+header a:visited,
+header a:hover,
+header a:active {
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -84,112 +88,6 @@ header h1 {
 header p {
     color: #053553;
     font-size: 14px;
-}
-
-// Footer
-footer h2 {
-    color: #053553;
-    font-size: 60px;
-    text-transform: uppercase;
-    font-family:'Oswald';
-    margin: 20px 0 30px 0;
-}
-
-footer .posts {
-    display: flex;
-}
-
-footer .post {
-    flex:3;
-    height: 25vw;
-    padding: 20px;
-    display: flex;
-    align-items: flex-end;
-}
-
-#photo1 {
-    background-image: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), image-url("surfer.jpg");
-    background-size: cover;
-}
-
-#photo1:hover {
-    background-image: image-url("surfer.jpg");
-    background-size: cover;
-}
-
-#photo2 {
-    background-image: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), image-url("waves.jpg");
-    background-size: cover;
-}
-
-#photo2:hover {
-    background-image: image-url("waves.jpg");
-    background-size: cover;
-}
-
-#photo3 {
-    background-image: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), image-url("ognjea.jpg");
-    background-size: cover;
-}
-
-#photo3:hover {
-    background-image: image-url("ognjea.jpg");
-    background-size: cover;
-}
-
-#photo4 {
-    background-image: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), image-url("soul-surfer.jpg");
-    background-size: cover;
-}
-
-#photo4:hover {
-    background-image: image-url("soul-surfer.jpg");
-    background-size: cover;
-}
-
-.posts h3 {
-    text-transform: uppercase;
-    font-family: 'Oswald'
-}
-
-.post:hover {
-    color: white;
-}
-
-.footer, .footer a {
-    background: #053553;
-    padding: 40px 0;
-    margin: 0;
-    color: #A3B3BE;
-}
-
-.footer a {
-    margin: 0 20px;
-}
-
-.footer a:last-child {
-    margin-right: 0;
-}
-
-.footer-nav {
-  height:40px;
-  vertical-align: middle;
-}
-
-.footer-style {
-  display: flex;
-  align-items: center;
-}
-
-/* Posts */
-
-.home-post-title {
-  font-size: 65px;
-  color: #083451;
-}
-
-.post:hover {
-  color: #000000;
 }
 
 /* section left */
@@ -231,7 +129,11 @@ section .date {
     text-decoration: underline;
 }
 
-.date a, .date a:visited, .date a:link, .date a:hover, .date a:active {
+.date a,
+.date a:visited,
+.date a:link,
+.date a:hover,
+.date a:active {
     text-decoration: underline;
     color:#A3B3BE;
 }
@@ -257,7 +159,11 @@ section .quote {
     padding: 8px;
 }
 
-.lw-links a, .lw-links a:visited, .lw-links a:link, .lw-links a:hover, .lw-links a:active {
+.lw-links a,
+.lw-links a:visited,
+.lw-links a:link,
+.lw-links a:hover,
+.lw-links a:active {
     text-decoration: none;
     color: white;
     background-color: #A3B3BE;
@@ -340,7 +246,11 @@ section .quote {
     font-family: 'Open Sans';
 }
 
-.tp-lt-ad a, .tp-lt-ad:visited, .tp-lt-ad:link, .tp-lt-ad:hover, .tp-lt-ad:active {
+.tp-lt-ad a,
+.tp-lt-ad:visited,
+.tp-lt-ad:link,
+.tp-lt-ad:hover,
+.tp-lt-ad:active {
     color: #A3B3BE;
     text-decoration: underline;
 }
