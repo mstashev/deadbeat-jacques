@@ -43,19 +43,19 @@ $(document).ready(function(){
       if (tags.indexOf(tag) != (tags.length - 1)) {
         if (tag.name.includes('/') == true){
           var internet_tag_name = tag.name.replace('/','_')
-          tag_list += `<a href="${tag_url(internet_tag_name)}">${tag.name}</a>,&nbsp;`
+          tag_list += `<a href="${tags_url(internet_tag_name)}">${tag.name}</a>,&nbsp;`
         }
         else {
-          tag_list += `<a href="${tag_url(tag.name)}">${tag.name}</a>,&nbsp;`
+          tag_list += `<a href="${tags_url(tag.name)}">${tag.name}</a>,&nbsp;`
         }
       }
       else {
         if (tag.name.includes('/') == true){
           var internet_tag_name = tag.name.replace('/','_')
-          tag_list += `<a href="${tag_url(internet_tag_name)}">${tag.name}</a>`
+          tag_list += `<a href="${tags_url(internet_tag_name)}">${tag.name}</a>`
         }
         else {
-          tag_list += `<a href="${tag_url(tag.name)}">${tag.name}</a>`
+          tag_list += `<a href="${tags_url(tag.name)}">${tag.name}</a>`
         }
       }
     })
