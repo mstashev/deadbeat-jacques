@@ -48,7 +48,7 @@ $(document).ready(function(){
     return  `
               <div class="media" id="note-${note.id}">
                 <div class="media-body">
-                  <h5>${note.title}</h5>
+                  <h4>${note.title}</h4>
                   <p>${note.body}</p>
                   <p><i class="glyphicon glyphicon-tags"></i>&nbsp;&nbsp;${print_notes(note.tags)}</p>
                   <p><small>Posted by ${note.user.username} <a href="#note-${note.id}" class="note">${moment(note.created_at).fromNow()}</a></small></p>
