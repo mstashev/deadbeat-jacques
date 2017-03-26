@@ -41,22 +41,10 @@ $(document).ready(function(){
     var tag_list = ''
     tags.forEach(function(tag){
       if (tags.indexOf(tag) != (tags.length - 1)) {
-        if (tag.name.includes('/') == true){
-          var internet_tag_name = tag.name.replace('/','_')
-          tag_list += `<a href="${tags_url(internet_tag_name)}">${tag.name}</a>,&nbsp;`
-        }
-        else {
-          tag_list += `<a href="${tags_url(tag.name)}">${tag.name}</a>,&nbsp;`
-        }
+        tag_list += `<a href="${tag.name}">${tag.name}</a>,&nbsp;`
       }
       else {
-        if (tag.name.includes('/') == true){
-          var internet_tag_name = tag.name.replace('/','_')
-          tag_list += `<a href="${tags_url(internet_tag_name)}">${tag.name}</a>`
-        }
-        else {
-          tag_list += `<a href="${tags_url(tag.name)}">${tag.name}</a>`
-        }
+        tag_list += `<a href="${tag.name}">${tag.name}</a>`
       }
     })
     return tag_list
@@ -102,6 +90,28 @@ $(document).ready(function(){
         })
       })
     }
+
+    function populate_tagged_notes(tag) {
+      $('#note_list').empty()
+      $.getJSON(tags_url(tag))
+        .done(function(response){
+          response.tag.notes.forEach(function(note){
+            $('#note_list').append(
+              note_display(note)
+            )
+          })
+        })
+      }
+
+    $(document).on('click', '.tag_href', function(ev){
+      ev.preventDefault()
+      $.post(api_root + "create", $(this).serialize())
+        .done(function(response){
+        set_token(response.api_token)
+        toggle_sign_in()
+        populate_tagged_notes()
+      })
+    })
 
     $('#sign_up').on('submit', function(ev){
       ev.preventDefault()
