@@ -41,6 +41,7 @@ $(document).ready(function(){
     var tag_list = ''
     tags.forEach(function(tag){
       console.log(tags.indexOf(tag))
+      console.log(tags.length)
       if (tags.indexOf(tag) != tags.length) {
         tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>,&nbsp;`
       }
