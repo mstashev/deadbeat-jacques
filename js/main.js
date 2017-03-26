@@ -109,7 +109,7 @@ $(document).ready(function(){
       $.get(tags_url(tag), $(this).serialize())
         .done(function(response){
         toggle_sign_in()
-        populate_tagged_notes()
+        populate_tagged_notes(tag)
       })
     })
 
