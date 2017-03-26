@@ -33,8 +33,15 @@ $(document).ready(function(){
     }
   }
 
- function reset_form(form_id){
+ function reset_form(form_id) {
     $(form_id)[0].reset()
+  }
+
+  function print_notes(tags) {
+    tag_list = 
+    tags.forEach(function(tag){
+
+    })
   }
 
   function note_display(note) {
@@ -45,7 +52,7 @@ $(document).ready(function(){
                 </div>
                 <div class="media-body">
                   <p>${note.body}</p>
-                  <p>${note.tags}</p>
+                  <p>${print_notes(note.tags)}</p>
                   <p><small>Posted by ${note.user.username} <a href="#note-${note.id}" class="note">${moment(note.created_at).fromNow()}</a></small></p>
                 </div>
               </div>
@@ -123,7 +130,7 @@ $(document).ready(function(){
       $('#note_list').empty()
       $.getJSON(notes_url())
         .done(function(response){
-          console.log(response.notes)
+          // console.log(response.notes)
           response.notes.forEach(function(note){
             $('#note_list').append(
               note_display(note)
