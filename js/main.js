@@ -45,6 +45,7 @@ $(document).ready(function(){
                 </div>
                 <div class="media-body">
                   <p>${note.body}</p>
+                  <p>${note.tags}</p>
                   <p><small>Posted by ${note.user.username} <a href="#note-${note.id}" class="note">${moment(note.created_at).fromNow()}</a></small></p>
                 </div>
               </div>
@@ -103,7 +104,6 @@ $(document).ready(function(){
       ev.preventDefault()
       $.post(api_root + "login", $(this).serialize())
         .done(function(response){
-          // console.log(response)
           set_token(response.api_token)
           reset_form('#sign_in')
           toggle_sign_in()
@@ -123,14 +123,12 @@ $(document).ready(function(){
       $('#note_list').empty()
       $.getJSON(notes_url())
         .done(function(response){
-          // console.log(response.notes)
+          console.log(response.notes)
           response.notes.forEach(function(note){
-            console.log(note_display(note))
             $('#note_list').append(
               note_display(note)
             )
           })
-          // console.log($('#note_list').html())
           if(window.location.hash){
             $('a[href="' + window.location.hash + '"]').click()
           }
