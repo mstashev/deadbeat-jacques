@@ -38,10 +38,11 @@ $(document).ready(function(){
   }
 
   function print_notes(tags) {
-    tag_list =
+    var tag_list = ''
     tags.forEach(function(tag){
-
+      tag_list += `<a href="notes/tag/${tag.name}">${tag.name}</a>`
     })
+    return tag_list
   }
 
   function note_display(note) {
