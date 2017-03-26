@@ -1,1 +1,368 @@
-/**/
+/* Global */
+
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.search {
+  padding-right:100px;
+}
+
+.search-icon {
+  padding-right:125px;
+}
+
+/* Header */
+ header {
+    background-image: image-url("ocean-background.jpg");
+    background-size: cover;
+    font-family: 'Open Sans';
+ }
+
+.top-menu {
+    padding: 10px 0;
+}
+
+.top-menu .logo {
+    height: 100%;
+    padding-right: 10px;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+      color: #053553;
+}
+
+header a, header a:link, header a:visited, header a:hover, header a:active {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-pad-rt {
+    padding-top: 10px;
+    padding-bottom: 16px;
+    font-family: 'Oswald';
+    padding-right: 10px;
+}
+
+.nav-pad-rt i {
+    padding-left: 5px;
+}
+
+.a-pad {
+    padding-right: 10px;
+}
+
+.hdr-main {
+    padding: 100px 10px 150px 10px;
+}
+
+header h1 {
+    color: white;
+    font-size: 90px;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #053553;
+    font-size: 14px;
+}
+
+// Footer
+footer h2 {
+    color: #053553;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family:'Oswald';
+    margin: 20px 0 30px 0;
+}
+
+footer .posts {
+    display: flex;
+}
+
+footer .post {
+    flex:3;
+    height: 25vw;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+#photo1 {
+    background-image: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), image-url("surfer.jpg");
+    background-size: cover;
+}
+
+#photo1:hover {
+    background-image: image-url("surfer.jpg");
+    background-size: cover;
+}
+
+#photo2 {
+    background-image: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), image-url("waves.jpg");
+    background-size: cover;
+}
+
+#photo2:hover {
+    background-image: image-url("waves.jpg");
+    background-size: cover;
+}
+
+#photo3 {
+    background-image: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), image-url("ognjea.jpg");
+    background-size: cover;
+}
+
+#photo3:hover {
+    background-image: image-url("ognjea.jpg");
+    background-size: cover;
+}
+
+#photo4 {
+    background-image: linear-gradient(rgba(47,117,179,0.75), rgba(47,117,179,0.75)), image-url("soul-surfer.jpg");
+    background-size: cover;
+}
+
+#photo4:hover {
+    background-image: image-url("soul-surfer.jpg");
+    background-size: cover;
+}
+
+.posts h3 {
+    text-transform: uppercase;
+    font-family: 'Oswald'
+}
+
+.post:hover {
+    color: white;
+}
+
+.footer, .footer a {
+    background: #053553;
+    padding: 40px 0;
+    margin: 0;
+    color: #A3B3BE;
+}
+
+.footer a {
+    margin: 0 20px;
+}
+
+.footer a:last-child {
+    margin-right: 0;
+}
+
+.footer-nav {
+  height:40px;
+  vertical-align: middle;
+}
+
+.footer-style {
+  display: flex;
+  align-items: center;
+}
+
+/* Posts */
+
+.home-post-title {
+  font-size: 65px;
+  color: #083451;
+}
+
+.post:hover {
+  color: #000000;
+}
+
+/* section left */
+
+.section-margin {
+    margin-top: 40px;
+}
+
+
+section h2 {
+    color: #053553;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family:'Oswald';
+}
+
+.hdr-p {
+    margin: 0;
+    font-family: 'Open Sans';
+    color:#196FB1;
+}
+
+.section img {
+    width: 30px;
+    height: 100%;
+}
+
+.tp-lt-portrait h4 {
+    padding-left: 7px;
+}
+
+section .date {
+    color:#A3B3BE;
+    text-decoration: underline;
+}
+
+.p-top .date {
+    color:#A3B3BE;
+    text-decoration: underline;
+}
+
+.date a, .date a:visited, .date a:link, .date a:hover, .date a:active {
+    text-decoration: underline;
+    color:#A3B3BE;
+}
+
+section .p-top {
+    color: #5E686F;
+    margin-top: 40px;
+}
+
+section .quote {
+    color:#196FB1;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+#p-no-margin {
+    margin-top: 0px;
+}
+
+.lw-links i {
+    color: white;
+    background-color: #5E686F;
+    padding: 8px;
+}
+
+.lw-links a, .lw-links a:visited, .lw-links a:link, .lw-links a:hover, .lw-links a:active {
+    text-decoration: none;
+    color: white;
+    background-color: #A3B3BE;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.lw-links span {
+    padding: 5px 15px 5px 15px;
+    display: inline-block;
+    color: white;
+}
+
+#blue-a {
+    background-color: #196FB1;
+}
+
+#blue-share {
+    background-color: #053553;
+}
+
+/* section right */
+
+.rt-sct-container {
+    max-width: 250px;
+    padding: 0 30px;
+}
+
+.tp-lt-portrait {
+    padding-left: 15px;
+}
+
+.tp-lt-portrait img {
+    width: 90px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.tp-lt-portrait h4 {
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    color: #196FB1;
+}
+
+.tp-lt-scl-media {
+    padding-left: 15px;
+}
+
+.tp-lt-scl-media p {
+    display: inline-block;
+    color: #A3B3BE;
+    font-family: 'Open Sans';
+    padding: 0 5px;
+}
+
+.hdr-p {
+    padding-left: 0;
+}
+
+#user {
+    padding-left: 7px;
+}
+
+.p-top, .quote {
+    padding-right: 15px;
+}
+
+.tp-lt-ad {
+    padding-left: 15px;
+}
+
+.tp-lt-ad img {
+    width: 319px;
+    height: auto;
+    margin-top: 40px;
+}
+
+.tp-lt-ad p {
+    display: inline-block;
+    font-family: 'Open Sans';
+}
+
+.tp-lt-ad a, .tp-lt-ad:visited, .tp-lt-ad:link, .tp-lt-ad:hover, .tp-lt-ad:active {
+    color: #A3B3BE;
+    text-decoration: underline;
+}
+
+.bm-lt-p {
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.bm-lt-p h3 {
+    color: #196FB1;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.bm-lt-p p {
+    color: #A3B3BE;
+    font-family: 'Open Sans';
+}
+
+.photo {
+  min-width: 250px;
+  min-height: 250px;
+}
