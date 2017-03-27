@@ -154,7 +154,7 @@ $(document).ready(function(){
     console.log(get_token())
     $.post(api_root + "notes?api_token=" + get_token(), $(this).serialize())
     .done(function(response){
-      console.log(note)
+      console.log(response.note)
       $('#note_list').prepend(
         note_display(response.note)
       )
