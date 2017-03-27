@@ -134,6 +134,7 @@ $(document).ready(function(){
 
     $('#post_note').on('submit', function(ev){
       ev.preventDefault()
+      console.log(get_token())
       $.post(api_root + "notes?api_token=" + get_token(), $(this).serialize())
         .done(function(note){
           $('#note_list').prepend(
@@ -162,7 +163,6 @@ $(document).ready(function(){
     })
 
     $(document).on('click', '.note_show', function(ev){
-      // ev.preventDefault()
       id_to_fetch = $(ev.target).attr("href")
       console.log($(id_to_fetch).html())
       $('#modal_one .modal-body').html($(id_to_fetch).html())
@@ -173,7 +173,6 @@ $(document).ready(function(){
       $('#note_list').empty()
       $.getJSON(notes_url())
         .done(function(response){
-          // console.log(response.notes)
           response.notes.forEach(function(note){
             $('#note_list').append(
               note_display(note)
