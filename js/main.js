@@ -51,8 +51,8 @@ $(document).ready(function(){
   }
 
   function note_display(note) {
-    if (note.user.username == null) {
-      note.user.username = "Anonymous"
+    if (${note.user.username} == null) {
+      ${note.user.username} = "Anonymous"
     }
 
     return  `
