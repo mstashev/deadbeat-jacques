@@ -153,10 +153,10 @@ $(document).ready(function(){
     ev.preventDefault()
     console.log(get_token())
     $.post(api_root + "notes?api_token=" + get_token(), $(this).serialize())
-    .done(function(note){
+    .done(function(response){
       console.log(note)
       $('#note_list').prepend(
-        note_display(note)
+        note_display(response.note)
       )
       reset_form('#post_note')
     })
