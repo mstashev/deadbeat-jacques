@@ -51,11 +51,12 @@ $(document).ready(function(){
   }
 
   function note_display(note) {
+    var username = ''
     if (note.user.username === null) {
-      var username = "Anonymous"
+      username = "Anonymous"
     }
     else {
-      var username = note.user.username
+      username = note.user.username
     }
 
     return  `
