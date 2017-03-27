@@ -52,7 +52,7 @@ $(document).ready(function(){
 
   function note_display(note) {
     var username = ''
-    if (note.user.username == '') {
+    if (note.user == null) {
       username = "Anonymous"
     }
     else {
