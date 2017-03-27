@@ -5,7 +5,7 @@
 
 - √ On load, your app should display all the notes and a form to add a new note. The primary heading on the page should be "Notemeister 5000"
 
-- √ Tag names should be links that when clicked, load the notes with that tag and change the primary heading to "Notemeister 5000: {{tag name}}"
+- √ Tag names should be links that when clicked, load the notes with that tag and change the primary heading to "Notemeister 5000: {{tag name}}" 
 
 - √ Posting a new note should add it to the top of the list and clear out the form so you can post another
 
