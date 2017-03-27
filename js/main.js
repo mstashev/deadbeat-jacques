@@ -3,11 +3,11 @@ $(document).ready(function(){
 
   // Utility Methods
 
-  function set_token(api_token) {
+  function set_token(api_token){
     localStorage.setItem('api_token', api_token);
   }
 
-  function get_token() {
+  function get_token(){
     return localStorage.getItem('api_token')
   }
 
@@ -15,7 +15,7 @@ $(document).ready(function(){
     localStorage.removeItem('api_token')
   }
 
-  function signed_in() {
+  function signed_in(){
     if(localStorage.getItem('api_token') === null) {
       return false
     } else {
@@ -27,20 +27,21 @@ $(document).ready(function(){
     if(signed_in()){
       $('.logged_out').hide()
       $('.logged_in').show()
-    }else{
+    }
+    else{
       $('.logged_in').hide()
       $('.logged_out').show()
     }
   }
 
- function reset_form(form_id) {
+ function reset_form(form_id){
     $(form_id)[0].reset()
   }
 
-  function print_notes(tags) {
+  function print_notes(tags){
     var tag_list = ''
     tags.forEach(function(tag){
-      if (tags.indexOf(tag) != (tags.length - 1)) {
+      if (tags.indexOf(tag) != (tags.length - 1)){
         tag_list += `<a href="${tag.name}" class="tag_href">${tag.name}</a>,&nbsp;`
       }
       else {
@@ -50,9 +51,9 @@ $(document).ready(function(){
     return tag_list
   }
 
-  function note_display(note) {
+  function note_display(note){
     var username = ''
-    if (note.user == null) {
+    if (note.user == null){
       username = "Anonymous"
     }
     else {
@@ -71,7 +72,7 @@ $(document).ready(function(){
             `
   }
 
-  function notes_url() {
+  function notes_url(){
     if(signed_in()){
       return api_root + "notes?api_token=" + get_token()
     } else {
@@ -79,7 +80,7 @@ $(document).ready(function(){
     }
   }
 
-  function tags_url(tag_name) {
+  function tags_url(tag_name){
     if(signed_in()){
       return api_root + "notes/tag/" + tag_name + "?api_token=" + get_token()
     } else {
@@ -87,7 +88,7 @@ $(document).ready(function(){
     }
   }
 
-  function populate_notes() {
+  function populate_notes(){
     $('#note_list').empty()
     $.getJSON(notes_url())
       .done(function(response){
@@ -99,7 +100,7 @@ $(document).ready(function(){
       })
     }
 
-    function populate_tagged_notes(tag) {
+    function populate_tagged_notes(tag){
       $('#note_list').empty()
       $.getJSON(tags_url(tag))
         .done(function(response){
@@ -132,11 +133,13 @@ $(document).ready(function(){
         })
     })
 
+    // When you submit a new note
     $('#post_note').on('submit', function(ev){
       ev.preventDefault()
       console.log(get_token())
       $.post(api_root + "notes?api_token=" + get_token(), $(this).serialize())
         .done(function(note){
+          console.log(note)
           $('#note_list').prepend(
             note_display(note)
           )
