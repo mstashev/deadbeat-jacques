@@ -1,15 +1,15 @@
 # deadbeat-jacques
 
 ## Explorer Mode
-- If your Notemeister API (from the Jacques assignment) isn't complete through Explorer Mode, you'll need to finish it up
+- √ If your Notemeister API (from the Jacques assignment) isn't complete through Explorer Mode, you'll need to finish it up
 
-- On load, your app should display all the notes and a form to add a new note. The primary heading on the page should be "Notemeister 5000"
+- √ On load, your app should display all the notes and a form to add a new note. The primary heading on the page should be "Notemeister 5000"
 
-- Tag names should be links that when clicked, load the notes with that tag and change the primary heading to "Notemeister 5000: {{tag name}}"
+- √ Tag names should be links that when clicked, load the notes with that tag and change the primary heading to "Notemeister 5000: {{tag name}}"
 
-- Posting a new note should add it to the top of the list and clear out the form so you can post another
+- √ Posting a new note should add it to the top of the list and clear out the form so you can post another
 
-- If I append the id of a note to the url (as: #:id), a Bootstrap modal should display with just that specific note.
+- √ If I append the id of a note to the url (as: #:id), a Bootstrap modal should display with just that specific note.
 
 ## Adventure Mode
 - If your Jacques API is not complete up through Adventure Mode (minus tests unless you're feeling froggy), do so
@@ -18,7 +18,7 @@
 
 - Add login functionality through a modal window
 
-- Once signed up/logged in, notes are posted as a specific user and the only notes displayed are that user's
+- √ Once signed up/logged in, notes are posted as a specific user and the only notes displayed are that user's
 
 - Notes now have an edit link/button that pops open a modal window with a form to edit the note
 
