@@ -134,7 +134,7 @@ $(document).ready(function(){
 
     $('#post_note').on('submit', function(ev){
       ev.preventDefault()
-      $.post(api_root + "notes", $(this).serialize())
+      $.post(api_root + "notes?api_token=" + get_token(), $(this).serialize())
         .done(function(note){
           $('#note_list').prepend(
             note_display(note)
