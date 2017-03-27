@@ -51,6 +51,10 @@ $(document).ready(function(){
   }
 
   function note_display(note) {
+    if (note.user.username === null) {
+      note.user.username = "Anonymous"
+    }
+
     return  `
               <div class="media" id="note-${note.id}">
                 <div class="media-body">
