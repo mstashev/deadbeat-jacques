@@ -139,7 +139,7 @@ $(document).ready(function(){
   // then create in the db
   $('#sign_up').on('submit', function(ev){
     ev.preventDefault()
-    $.post(api_root + "create", $(this).serialize())
+    $.post(api_root + "users", $(this).serialize())
     .done(function(response){
       set_token(response.api_token)
       toggle_sign_in()
